@@ -1,21 +1,21 @@
-
 /**
  * Nutze diese Datei für benutzerdefinierte Funktionen und Blöcke.
  * Weitere Informationen unter https://makecode.calliope.cc/blocks/custom
  */
 
-enum MyEnum {
-    //% block="one"
-    One,
-    //% block="two"
-    Two
-}
+//% weight=100 color=#0fbc11 icon="\uf1eb"
+namespace InfraredReceiver  {
+    export function setInfraredReceiverPin(pin: DigitalPin): void {
+        pins.setEvents(pin, PinEventType.Pulse)
+        pins.setPull(pin, PinPullMode.PullUp)
+        pins.onPulsed(pin, PulseValue.Low, function () {
+        })
+        pins.onPulsed(pin, PulseValue.High, function () {
+        })
+        control.onEvent(pin, DAL.MICROBIT_PIN_EVENT_ON_TOUCH, function () {
 
-/**
- * Benutzerdefinierte Blöcke
- */
-//% weight=100 color=#0fbc11 icon=""
-namespace custom {
+        })
+    }
     /**
      * TODO: Beschreibe deine Funktion hier
      * @param n Beschreibe die Parameter hier, eg: 5
