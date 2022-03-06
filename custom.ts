@@ -7,8 +7,8 @@
 namespace InfraredReceiver  {
     let infraredLastSeenAt = 0
     /**
-     * TODO: Beschreibe deine Funktion hier
-     * @param pin Beschreibe die Parameter hier, eg: 5
+     * Sets a Pin to be the digital input for an IR device.
+     * @param pin the Pin to be used as an input for an IR device
      */
     //% block
     export function setInfraredReceiverPin(pin: DigitalPin): void {
@@ -24,8 +24,7 @@ namespace InfraredReceiver  {
     }
 
     /**
-     * TODO: Beschreibe deine Funktion hier
-     * @param pin Beschreibe die Parameter hier, eg: 5
+     * Checks whether an infrared signal has just been detected recently.
      */
     //% block
     export function isInfraredSignalDetected(): boolean {
